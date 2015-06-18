@@ -1,11 +1,17 @@
-
+html{
+    width:100%;
+}
   table {
+  height: 220px;
+  width:100px;
     background: #262b56;
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
   }
   img.profile {
     border-radius: 100px;
+    height:100px;
+    width:100px;
     /*
     -webkit-animation:spin 4s linear infinite;
     -moz-animation:spin 4s linear infinite;
@@ -97,14 +103,12 @@ img.badgeicon{
     color: #fff;
   }
   .tg .profilepic {
-    min-width: 20%;
     border-radius:0 0 0 100px  ;
   }
   .tg .since {
     max-height: 10px;
     padding-right:18px;
-    width: 15%;
-    min-width: 60px;
+    width: 150px;
     overflow: hidden;
     color: #aaa;
   }
@@ -130,7 +134,6 @@ img.badgeicon{
     border-radius: 15px 0px 0px 0px;
   }
   .tg .tiername {
-    min-width: 248px;
     text-align: right;
     background: #0c0f1d;
     color: #fff;
