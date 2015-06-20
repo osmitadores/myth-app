@@ -35,6 +35,17 @@
 <div id="tabelas"></div><br>
     <script type="text/javascript" src="tinysort.js"></script>
     <script type="text/javascript" src="gayQuery.js"></script>
+    <script type="text/javascript">
+        var version = '0.1.0';
+        var getVersion = '';
+        var verPATH = "https://raw.githubusercontent.com/osmitadores/myth-app/master/version.myth";
+        $.get(verPATH, function(data){
+        console.log(data);});
+        console.log("Nova "+getVersion);
+        console.log("Local "+version);
+    
+    </script>
+    
     <script type="text/javascript" src="mythdata.js"></script>
     <script type="text/javascript" src="mythmitos.js"></script>
     <script type="text/javascript" src="mythcore.js"></script>
