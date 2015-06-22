@@ -35,7 +35,6 @@
 *       > Exemplo: var pauHd = createBadge('Aragão exclusive \'Pau em HD\' Badge');
 */
 
-   document.getElementById('titl').innerHTML = "Mostrando lista na ordem default";
 
 function writeBadges(myth){
 /*
@@ -60,7 +59,7 @@ function indexMyth(osMitos){
 *   outro argumento válido**
 */
 
-
+    document.getElementById('version').innerHTML = '';
     for (var i in osMitos){
 
         document.getElementById('tabelas').innerHTML += createTable(osMitos[i]);
@@ -72,7 +71,8 @@ function indexMyth(osMitos){
 }
 
 //////////////////////////////
-
+$.get(updatePATH, insertVersion);
+document.getElementById('titl').innerHTML = "Mostrando lista na ordem default";
 var checkAlfa = true;
 var checkBadge = false;
 var checkTier = true;
@@ -174,7 +174,7 @@ function clickedButton(type){
 
 
 ///////////////////////////////
-indexMyth(Myth);
+
 
 $(document).ready(function(){
 

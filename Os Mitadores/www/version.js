@@ -2,22 +2,22 @@ function insertVersion(data){
     document.getElementById('version').innerHTML = (data);
     lastVersion = document.getElementById('version').innerHTML;
     if(lastVersion == ''){
-    noConnect();
-}else{
-    checkUpdate();
+        noConnect();
+    }else{
+        checkUpdate();
+    }
 }
-}
+
+$.ajaxSetup({ cache: false });
 var lastVersion = '';
-var atualVersion = [0,0,0];
+var atualVersion = [0,2,0];
+var update = true;
 var updatePATH = "https://raw.githubusercontent.com/osmitadores/myth-app/master/version.myth";
-$.get(updatePATH, insertVersion);
-
-
 
 
 function noConnect(){
-    alert("Sem conex„o!")
-    //window.location.replace("noconnect.html");
+    alert("Sem conex√£o!")
+    window.location.replace("noconnect.html");
 }
 
 function checkUpdate(){
@@ -28,26 +28,28 @@ function checkUpdate(){
         lastVersion[i] = parseInt(lastVersion[i]);
     }
     if(atualVersion[0] < lastVersion[0]){
-        alert('nova vers„o maior disponivel');
+        update = confirm('Nova vers√£o maior dispon√≠vel.\nDeseja atualizar?');
         downloadUpdate(lastVersion);
     }else if (atualVersion[1] < lastVersion[1]){
-        alert('nova vers„o menor disponivel');
+        update = confirm('Nova vers√£o menor dispon√≠vel.\nDeseja atualizar?');
         downloadUpdate(lastVersion);
     }else if (atualVersion[2] < lastVersion[2]){
-        alert('nova vers„o ajuste disponivel');
+        update = confirm('Nova vers√£o de ajuste dispon√≠vel.\nDeseja atualizar?');
         downloadUpdate(lastVersion);
-    }else{
-        alert('atualizado');
+    }else {
+        indexMyth(Myth);
     }
 }
 
 function downloadUpdate(version){
-    version = version[0] +'.'+ version[1] +'.'+ version[2];
-    window.location.href = 'http://path/v' + lastVersion[0] + '.' + lastVersion[1] + '.' + lastVersion[2] + '.apk'; 
+    if (update) {
+        var downloadPATH = 'https://github.com/osmitadores/myth-app/releases/download/v';
+        version = version[0] +'.'+ version[1] +'.'+ version[2];
+        window.location.href = downloadPATH + version + '/OsMitadores.apk';
+    }else {
+        indexMyth(Myth);
+    }
 }
-
-
-
 
 ////////////////////////////////
 function getID(){
