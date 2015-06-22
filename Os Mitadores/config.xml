@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.osmitadores.mythboard" version="0.2.1">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.osmitadores.mythboard" version="0.2.2">
   <name>Os Mitadores</name>
   <description>Mythboard.</description>
   <author href="http://osmitadores.github.io" email="support@phonegap.com">Os Mitadores</author>
@@ -41,7 +41,7 @@
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
   <icon src="www/res/icon/android/icon-72-hdpi.png" gap:platform="android" gap:qualifier="hdpi"/>
   <icon src="www/res/icon/android/icon-96-xhdpi.png" gap:platform="android" gap:qualifier="xhdpi"/>
- 
+
 
   <access origin="*"/>
   <plugin name="cordova-plugin-whitelist" version="1"/>

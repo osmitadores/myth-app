@@ -10,7 +10,7 @@ function insertVersion(data){
 
 $.ajaxSetup({ cache: false });
 var lastVersion = '';
-var atualVersion = [0,2,1];
+var atualVersion = [0,2,2];
 var update = true;
 var updatePATH = "https://raw.githubusercontent.com/osmitadores/myth-app/master/version.myth";
 

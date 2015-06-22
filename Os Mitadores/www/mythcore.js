@@ -71,7 +71,7 @@ function indexMyth(osMitos){
 }
 
 //////////////////////////////
-$.get(updatePATH, insertVersion);
+indexMyth(Myth);
 document.getElementById('titl').innerHTML = "Mostrando lista na ordem default";
 var checkAlfa = true;
 var checkBadge = false;
