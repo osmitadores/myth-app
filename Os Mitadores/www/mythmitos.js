@@ -83,6 +83,20 @@
             pipoqueiro
         ]
     };
+    
+    Myth.barbara = {
+        nome: 'Bárbara',
+        tagId: 'barbara',
+        tagId1: 'barbara1',
+        faceId: '100002486446403',
+        tier: tierFreshman,
+        ano: '2015',
+        badges: [
+            mythGuest,
+            mythFresh,
+        ]
+    };
+    
     Myth.bruna = {
         nome: 'Bruna',
         tagId: 'bruna',
@@ -92,7 +106,7 @@
         ano: '2015',
         badges: [
             mythGuest,
-            cFlicky
+            cFlicky,
         ]
     };
     Myth.cesar = {
